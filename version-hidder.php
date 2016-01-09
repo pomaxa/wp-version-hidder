@@ -25,13 +25,7 @@ Author URI: http://p4.lv
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-
-
-$GLOBALS['wp_version'] = sha1($GLOBALS['wp_version'].'salt');
-//remove_action('wp_head', 'wp_generator');
-
-//function remove_wp_ver() { return ''; }
-//add_filter('the_generator', 'remove_wp_ver');
+$GLOBALS['wp_version'] = sha1($GLOBALS['wp_version'].'iNNextVerS1onH3reWillBeOption');
 
 function remove_wp_ver_par( $src ) {
     if ( strpos( $src, 'ver=' . get_bloginfo( 'version' ) ) ) {
@@ -41,23 +35,3 @@ function remove_wp_ver_par( $src ) {
 }
 add_filter( 'style_loader_src', 'remove_wp_ver_par', 9999 );
 add_filter( 'script_loader_src', 'remove_wp_ver_par', 9999 );
-
-
-
-//add_filter( 'wp_print_scripts', 'xcxc', 9999 );
-//function xcxc($src) {
-//
-//    var_dump($src);exit;
-////    return $src .'#xxxxxxxxxx111 ';
-//}
-
-///////////////////
-
-
-
-//add_action( 'wp_default_scripts', 'xcxc' );
-//add_filter( 'wp_print_scripts', 'xcxc' );
-//add_filter( 'print_scripts_array', 'xcxc' );
-//
-//add_action( 'wp_default_styles', 'xcxc' );
-//add_filter( 'style_loader_src', 'xcxc', 10, 2 );
